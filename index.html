@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tiradentes - Herói da Liberdade</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff66cc, #00ccff);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      font-size: 2em;
+      margin: 0;
+    }
+
+    .main-container {
+      display: flex;
+      flex: 1;
+      margin: 20px;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: #b66bb6;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 100px;
+      left: 20px;
+      height: fit-content;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+      color: #d4277e;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      display: block;
+      background-color: #e6e6ff;
+      border-radius: 5px;
+      text-align: center;
+      border: 2px solid #ff3399;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #af246a;
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      margin-left: 300px;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="title">Tiradentes - Herói da Liberdade</h1>
+  </header>
+
+  <div class="main-container">
+    <nav class="sidebar">
+      <ul>
+        <li><a onclick="mostrarSecao('inicio')">Quem foi Tiradentes?</a></li>
+        <li><a onclick="mostrarSecao('biografia')">Biografia de Tiradentes</a></li>
+        <li><a onclick="mostrarSecao('imagens')">O Martírio de um Herói</a></li>
+        <li><a onclick="mostrarSecao('contexto')">Contexto Histórico da Inconfidência</a></li>
+        <li><a onclick="mostrarSecao('legado')">Legado e Homenagens</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container">
+        <!-- Quem foi Tiradentes? -->
+        <section id="inicio" class="active">
+          <h2 style="color: #ff3366;">Quem foi Tiradentes?</h2>
+          <p style="color: #333;">
+            Tiradentes foi o apelido de Joaquim José da Silva Xavier, um dos líderes da Inconfidência Mineira.
+            Ele ficou conhecido por sua luta contra o domínio colonial português e por sua defesa de um Brasil independente.
+            Sua execução, em 1792, fez dele um mártir da causa libertadora.
+          </p>
+          <img src="imagem de tiradentes.jpeg" alt="Imagem de Tiradentes">
+        </section>
+
+        <!-- Biografia -->
+        <section id="biografia">
+          <h2 style="color: #cc33ff;">Biografia de Tiradentes</h2>
+          <p style="color: #444;">
+            Nascido em 1746 na Capitania de Minas Gerais, Tiradentes foi criado em um ambiente rural e trabalhou em diversas áreas,
+            como tropeiro, minerador, dentista e alferes (cargo militar). Foi influenciado pelos ideais iluministas e sonhava com
+            uma república brasileira independente de Portugal.
+          </p>
+          <img src="incofidencia mineira.jpeg" alt="Inconfidência Mineira">
+        </section>
+
+        <!-- Martírio -->
+        <section id="imagens">
+          <h2 style="color: #0066cc;">O Martírio de um Herói</h2>
+          <p style="color: #555;">
+            Após a descoberta da conspiração da Inconfidência, Tiradentes assumiu a responsabilidade por todo o movimento, mesmo
+            não sendo o único envolvido. Foi julgado, condenado e enforcado no Rio de Janeiro, tornando-se símbolo da luta por liberdade.
+          </p>
+          <img src="execução de tiradentes.jpeg" alt="Execução de Tiradentes">
+        </section>
+
+        <!-- Contexto Histórico -->
+        <section id="contexto">
+          <h2 style="color: #ff9900;">Contexto Histórico da Inconfidência</h2>
+          <p style="color: #444;">
+            A Inconfidência Mineira foi um movimento do final do século XVIII, motivado principalmente pela insatisfação com os altos
+            impostos cobrados pela Coroa portuguesa. Inspirados pelas revoluções americana e francesa, os inconfidentes queriam estabelecer
+            uma república independente em Minas Gerais.
+          </p>
+          <img src="pintura de tiradentes.jpeg" alt="Pintura de Tiradentes">
+        </section>
+
+        <!-- Legado -->
+        <section id="legado">
+          <h2 style="color: #009933;">Legado e Homenagens</h2>
+          <p style="color: #333;">
+            Tiradentes é considerado um dos principais heróis nacionais do Brasil. Sua morte é lembrada todo dia 21 de abril, feriado nacional.
+            Ele se tornou símbolo da luta contra a opressão e inspirou gerações que buscaram justiça e liberdade. Monumentos, cidades e escolas
+            levam seu nome como forma de homenagem.
+          </p>
+          <img src="cidade de tiradentes.jpeg" alt="Cidade de Tiradentes">
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function mostrarSecao(id) {
+      const secoes = document.querySelectorAll('section');
+      secoes.forEach(secao => {
+        secao.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
